@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body { font-family: sans-serif; }
+
+            .result { width: 50%; margin: 6em auto 0 auto; padding: 1em; color: #fff; text-align: center; }
+            .result-label { display: block; margin-bottom: 1em; font-weight: bold; }
+            .result-failure { background-color: #dc6d47; }
+            .result-ok { display: none; background-color: #50d69f; }
+
+            .whatsapp .result-failure { display: none; }
+            .whatsapp .result-ok { display: block; }
+            </style>
+        <script src="modernizr.js"></script>
+        <script>
+            Modernizr.addTest( 'whatsapp', function () {
+                var isSupportedOs = /android|iphone|blackberry([0-9]+\/(4\.[6-9]|[5-9])|.+Version\/[5-9])|series(40|60)|windows phone( os)? (7\.5|8)/i.test( navigator.userAgent || navigator.vendor );               
+                return isSupportedOs;
+            } );
+        </script>
+    </head>
+    <body>
+        <div class="result result-ok"><span class="result-label">Test result</span> Your OS is supported by WhatsApp.</div>
+        <div class="result result-failure"><span class="result-label">Test result</span> Your OS is not supported by WhatsApp.</div>
+    </body>
+</html>
