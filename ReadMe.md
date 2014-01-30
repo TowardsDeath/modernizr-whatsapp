@@ -16,6 +16,7 @@ If you find a flaw in the test's outcome, feel free to send in a pull request.
 
 ## Acknowledgements
 
-- The test was created in a few minutes and therefore isn't conclusive. However, it's enough to cover 95% of all cases.
+- Feature detection would be preferable to user agent sniffing, but that's impossible in this case.
+- The test was created in a few minutes and therefore isn't conclusive. However, it should be enough to cover 95% of all cases.
 - WhatsApp doesn't work on Android tablets, but this test doesn't exclude those devices.
 - The Android check doesn't yet take the version into account (Android OS 2.1 and above).
